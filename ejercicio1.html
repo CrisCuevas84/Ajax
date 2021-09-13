@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 Mapa</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+        
+        #map {
+            height: 100%;
+        }
+        /* Optional: Makes the sample page fill the window. */
+        
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <script>
+        let map;
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById("map"), {
+                center: {
+                    lat: -23.5422828,
+                    lng: -46.6325998
+                },
+                zoom: 12,
+            });
+
+            var marker = new google.maps.Marker({
+                position: {
+                    lat: -23.463766,
+                    lng: -46.600922
+                },
+                map: map,
+                title: 'Casa Cariño'
+            })
+        }
+    </script>
+</head>
+
+<body>
+    <div id="map" class="container">hola</div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhTWrVQdom_Liv1le8ZqKN0ms27Rdg0MU&callback=initMap&libraries=&v=weekly" async></script>
+</body>
+
+</html>
